@@ -4,12 +4,12 @@ go-micro-doc is document for [go-micro](https://github.com/wizk3y/go-micro), whi
 
 ## Table of content
 Structure
-- [Organize project as micro-services (single repository - best practice)](https://github.com/wizk3y/go-micro-doc/tree/master/structure/single_repository.md)
-- [Organize project as micro-services (multiple repositories - best practice)](https://github.com/wizk3y/go-micro-doc/tree/master/structure/multiple_repositories.md)
+- [Organize project as micro-services (single repository - best practice)](structure/single_repository.md)
+- [Organize project as micro-services (multiple repositories - best practice)](structure/multiple_repositories.md)
 
 Features
-- [Configuration](https://github.com/wizk3y/go-micro-doc/tree/master/feature/configuration.md)
-- [HTTP Middleware](https://github.com/wizk3y/go-micro-doc/tree/master/feature/http_middleware.md)
-- [PostgreSQL connection](https://github.com/wizk3y/go-micro-doc/tree/master/feature/postgresql_connection.md)
-- [MySQL connection](https://github.com/wizk3y/go-micro-doc/tree/master/feature/mysql_connection.md)
-- [Redis connection](https://github.com/wizk3y/go-micro-doc/tree/master/feature/redis_connection.md)
+- [Configuration](feature/configuration.md)
+- [HTTP Middleware](feature/http_middleware.md)
+- [PostgreSQL connection](feature/postgresql_connection.md)
+- [MySQL connection](feature/mysql_connection.md)
+- [Redis connection](feature/redis_connection.md)

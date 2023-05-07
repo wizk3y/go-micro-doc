@@ -11,8 +11,8 @@ Some application is depend on database. And to support build application with le
 package app
 
 import (
-    "github.com/wizk3y/go-micro/driver/database/redis"
-    "github.com/wizk3y/go-micro/transhttp"
+	"github.com/wizk3y/go-micro/driver/database/redis"
+	"github.com/wizk3y/go-micro/transhttp"
 )
 
 type server struct {
@@ -24,7 +24,7 @@ func NewServer() transhttp.WebServer {
 		basePath: "/v1",
 	}
 
-    var conf *redis.Config
+	var conf *redis.Config
 
 	// init db conn
 	db, err := redis.NewRedisConnection(conf)
@@ -40,13 +40,13 @@ func NewServer() transhttp.WebServer {
 - You can create your own config and provide to `NewRedisConnection`.
 ```go
 // pkg/app/webserver.go
-    conf = &redis.Config{
-        Host:     "127.0.0.1",
+	conf = &redis.Config{
+		Host:     "127.0.0.1",
 		Port:     "6379",
 		User:     "username",
 		Password: "password",
 		Database: 0,
-    }
+	}
 ```
 - Or you can quick create config by using `GetConfigWithPrefix` and provide prefix. By default if nil is provide to `NewRedisConnection`, config will be load by `GetConfigWithPrefix` with `redis` prefix.
 ```yaml
@@ -64,7 +64,7 @@ your_custom_prefix:
 
 ```go
 // pkg/app/webserver.go
-    conf = Redis.GetConfigWithPrefix("your_custom_prefix")
+	conf = Redis.GetConfigWithPrefix("your_custom_prefix")
 ```
 
 ## Configuration

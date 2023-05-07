@@ -80,7 +80,7 @@ import (
 	"net/http"
 
 	appA "domain-a/pkg/app"
-    appB "domain-b/pkg/app"
+	appB "domain-b/pkg/app"
 	"github.com/wizk3y/go-micro/logger"
 	"github.com/wizk3y/go-micro/micro"
 )

@@ -11,8 +11,8 @@ Some application is depend on database. And to support build application with le
 package app
 
 import (
-    "github.com/wizk3y/go-micro/driver/database/mysql"
-    "github.com/wizk3y/go-micro/transhttp"
+	"github.com/wizk3y/go-micro/driver/database/mysql"
+	"github.com/wizk3y/go-micro/transhttp"
 )
 
 type server struct {
@@ -24,7 +24,7 @@ func NewServer() transhttp.WebServer {
 		basePath: "/v1",
 	}
 
-    var conf *mysql.Config
+	var conf *mysql.Config
 
 	// init db conn
 	db, err := mysql.NewMySQLConnection(conf)
@@ -40,13 +40,13 @@ func NewServer() transhttp.WebServer {
 - You can create your own config and provide to `NewMySQLConnection`.
 ```go
 // pkg/app/webserver.go
-    conf = &mysql.Config{
-        Host:         "127.0.0.1",
+	conf = &mysql.Config{
+		Host:         "127.0.0.1",
 		Port:         "3306",
 		User:         "username",
 		Password:     "password",
 		DatabaseName: "database_name",
-    }
+	}
 ```
 - Or you can quick create config by using `GetConfigWithPrefix` and provide prefix. By default if nil is provide to `NewMySQLConnection`, config will be load by `GetConfigWithPrefix` with `mysql` prefix.
 ```yaml
@@ -64,7 +64,7 @@ your_custom_prefix:
 
 ```go
 // pkg/app/webserver.go
-    conf = mysql.GetConfigWithPrefix("your_custom_prefix")
+	conf = mysql.GetConfigWithPrefix("your_custom_prefix")
 ```
 
 ## Configuration
